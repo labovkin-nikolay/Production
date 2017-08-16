@@ -40,9 +40,10 @@ public final class TestFrame extends javax.swing.JFrame {
             return dbConnection;
         } else {
             try {
-                dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/production", "root", "08071994");
+                dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/production-", "root", "08071994");
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
+                return null;
             }
             return dbConnection;
         }
